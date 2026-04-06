@@ -1,0 +1,23 @@
+body{
+  margin: 0px;
+  padding: 0px;
+}
+
+.quadrado {
+
+  width: 100px;
+  height: 100px;
+  background: red;
+  position: relative;
+  
+
+  animation: mover 2s ease-in-out infinite;
+  
+ 
+  
+}
+
+@keyframes mover {
+  0% { left: 0; }
+  100% { left: calc(100vw - 100px); }
+}
