@@ -1,0 +1,26 @@
+body{
+     color: white;
+     background-color: black;
+
+}
+nav {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100px;
+    background-color: #222;
+}
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+    padding:0;
+}
+.cabeçalho{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+   
