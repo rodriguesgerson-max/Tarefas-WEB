@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora de IMC</title>
+</head>
+
+<body>
+
+    <form id="imcForm">
+        <label for="altura">Insira a altura (m):</label>
+        <input type="number" id="altura" name="altura" step="0.01" required>
+        <br><br>
+
+        <label for="peso">Insira o peso (kg):</label>
+        <input type="number" id="peso" name="peso" step="0.1" required>
+        <br><br>
+
+        <input type="submit" value="Calcular">
+    </form>
+
+    <script>
+
+        document.getElementById("imcForm").addEventListener("submit", calcularImc);
+
+        function calcularImc(event) {
+
+            event.preventDefault();
+
+            const altura = parseFloat(document.getElementById("altura").value);
+            const peso = parseFloat(document.getElementById("peso").value);
+
+            const imc = peso / (altura * altura);
+
+            if (imc < 18.5) {
+                alert("Seu IMC é " + imc.toFixed(2) + "\nVocê está abaixo do peso.");
+            }
+            else if (imc >= 18.5 && imc < 25) {
+                alert("Seu IMC é " + imc.toFixed(2) + "\nVocê está com peso normal.");
+            }
+            else if (imc >= 25 && imc < 30) {
+                alert("Seu IMC é " + imc.toFixed(2) + "\nVocê está com sobrepeso.");
+            }
+            else if (imc >= 30 && imc < 40) {
+                alert("Seu IMC é " + imc.toFixed(2) + "\nVocê está com obesidade.");
+            }
+            else {
+                alert("Seu IMC é " + imc.toFixed(2) + "\nVocê está com obesidade grave.");
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>
